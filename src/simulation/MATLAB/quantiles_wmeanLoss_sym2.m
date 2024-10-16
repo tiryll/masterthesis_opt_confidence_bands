@@ -16,7 +16,7 @@ function xmin = quantiles_wmeanLoss_sym2(Sigma_Theta,index,weights,nsims,cred,lB
     Cov_D(Cov_D<0)=0;
     Cov_sqrt = sqrt(real(Cov_D))*real(Cov_V)';
 
-    hn = nsims^(-1/3);
+    hn = nsims^(-1/2);
     
     Zs = randn(nsims,sum(nzero_entries))*Cov_sqrt;
 
@@ -33,7 +33,7 @@ end
 
 function f = dkernf(u)
 
-f = exp(u).*(1+exp(u)).^(-2);
+f = exp(-u-2.*log(1+exp(-u)));
 
 end
 

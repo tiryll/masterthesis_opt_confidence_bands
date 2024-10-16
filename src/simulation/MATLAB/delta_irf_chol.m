@@ -54,7 +54,7 @@ results.Sigma_Phi = Sigma_Phi;
 results.Sigma_Theta = Sigma_Theta;
 results.nvars = K;
 results.horizon = H;
-
+results.Jacobian=Jacobian_Theta;
 end
 
 function L =L_matrix(K)

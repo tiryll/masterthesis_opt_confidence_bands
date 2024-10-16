@@ -1,7 +1,7 @@
 
-function results = sim_svar_1(alpha,T,p,H)
+function results = sim_svar_1(rho,T,p,H)
 
-A = [alpha, zeros(1, 2*p - 1); 0.5.*repelem((1:p).^(-2), 2)];
+A = [rho, zeros(1, 2*p - 1); 0.5.*repelem((1:p).^(-2), 2)];
 comp_form = [A; [eye(2*(p-1)), zeros(2*(p-1), 2)]];
 
 P = [1, 0; 0.3, sqrt(1 - 0.3^2)];
@@ -28,9 +28,9 @@ for h = 1:H
 end
 
 results.y = y((2*p+1):end, :);
-results.coefficients = A;
-results.sigma = Sigma_U;
-results.structural_IRF = Theta;
-results.reducedform_IRF = Phi;
+results.A_true = A;
+results.Sigma_U_true = Sigma_U;
+results.Theta_true = Theta;
+results.Phi_true = Phi;
 
 end

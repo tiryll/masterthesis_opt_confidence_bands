@@ -1,9 +1,9 @@
 
-function results = sim_svar_1_vec(alpha,T,p,H,mc_runs)
+function results = sim_svar_1_vec(rho,T,p,H,mc_runs)
 
 K=2;
 
-A = [alpha, zeros(1, K*p - 1); 0.5.*repelem((1:p).^(-2), K)];
+A = [rho, zeros(1, K*p - 1); 0.5.*repelem((1:p).^(-2), K)];
 
 comp_form = [A;[eye(K*(p-1)), zeros(K*(p-1), K)]];
 
@@ -29,7 +29,7 @@ for h = 0:H
 end
 
 results.y = y((2*p+1):end, :, :);
-results.param = [alpha,T,p,H];
+results.param = [rho,T,p,H];
 results.Theta = Theta;
 results.Phi = Phi;
 
