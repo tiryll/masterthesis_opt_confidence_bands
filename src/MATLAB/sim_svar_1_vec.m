@@ -32,5 +32,5 @@ results.y = y((2*p+1):end, :, :);
 results.param = [rho,T,p,H];
 results.Theta = Theta;
 results.Phi = Phi;
-
+results.A_true_comp_form=comp_form;
 end
