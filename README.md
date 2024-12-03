@@ -21,5 +21,9 @@ The structure of the *src* folder is as follows:
 
 The folder *application* contains a MATLAB-live script that creates Figure 3, discussed in section 5. The folder *MATLAB* contains all functions used in the scripts. The functions with the ending "vec" are vectorized versions of the original functions and perform the calculations for all Monte Carlo Simulations at once.
 The folder *simulation* contains the source code for Figure 1, Figure 2, Table 1 and Table 2 in the respective subfolders *figure_1*, *table_1* (also includes code for Figure 1) and *table_2*.
+The computations for Figure 2, Table 1 and Table 2 in *table_1* and *table_2* are split into several numbered scripts and have to be executed in ascending order. 
 
-The computations for Figure 2, Table 1 and Table 2 in *table_1* and *table_2 *are split into several numbered scripts and have to be executed in ascending order. 
+The application is based on:
+Kilian, Lutz. 2009. "Not All Oil Price Shocks Are Alike: Disentangling Demand and Supply Shocks in the Crude Oil Market." *American Economic Review*, 99 (3): 1053–69.
+
+The corresponding data stored in *bld/data/application* can also be accessed from the [website of the paper](https://www.aeaweb.org/articles?id=10.1257/aer.99.3.1053).
